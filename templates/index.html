@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+
+<h1>My Library</h1>
+
+{% if data == []: %}
+<p>book is enpty</p>
+{% endif %}
+{% for value in data %}
+    <h1><ul><li><a href="{{ url_for('delete', id=value.id)}}">Delete</a>{{value.title}} - {{value.author}} - {{value.rating}}/10<a href="{{ url_for('edit', id=value.id) }}">Edit</a></li></h1>
+    </ul>
+
+{% endfor %}
+
+   
+<a href="{{ url_for('add') }}">Add New Book</a>
+</body>
+</html>
