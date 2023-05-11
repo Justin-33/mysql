@@ -65,6 +65,9 @@ def delete():
     db.session.commit()
     return redirect(url_for('home'))
 
+    print("life")
+    print("yoo what up")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
